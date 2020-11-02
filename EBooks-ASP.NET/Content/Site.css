@@ -1,12 +1,11 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #e9f2f6;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+* {
+    margin: 0;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -21,4 +20,352 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,300&display=swap");
+}
+
+p, span {
+    color: #bec7e8;
+    font-size: 1em;
+}
+
+
+div.panel {
+    display: flex;
+    height: 90px;
+    background: #2e343f;
+    padding-left: 16%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+p.main_head {
+    font-weight: 500;
+    color: #bec7e8;
+    cursor: pointer;
+}
+
+img.logo {
+    display: inline-block;
+    height: auto;
+    align-self: flex-end;
+}
+
+div.lang_panel {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+
+p.lang, p.lang_border {
+    margin: 0;
+    margin-top: 12px;
+    font-size: 1em;
+    font-weight: 300;
+    color: #a4a9ba;
+}
+p.lang_border {
+    color: #a4a9ba;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+
+div.background-content {
+    min-height: 100vh;
+    background: url("../Content/back-img.png");
+    background-size: cover;
+}
+
+div.container-content {
+    display: grid;
+    grid-template-columns: 5% 70% 5% 20%;
+    margin: auto;
+    width: 80%;
+    height: 99.5%;
+    min-height: 100vh;
+    background: rgba(32, 43, 54, .6);
+    border-style: groove;
+    border-width: 2px;
+    border-color: #473e35;
+    border-radius: 2px;
+}
+
+
+div.news, div.reviews_contatiner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 50px;
+    grid-column-start: 2;
+}
+
+div.menu {
+    padding-top: 50px;
+    grid-column-start: 4;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    height: 100%;
+    box-sizing: border-box;
+    border-left-style: groove;
+    border-left-width: 3px;
+    border-left-color: #473e35;
+    border-radius: 2px;
+}
+
+button.menu_item {
+    background-color: rgb(62, 83, 102);
+    border-radius: 0.3em;
+    margin-bottom: 10px;
+    border: 1px;
+    height: 40px;
+    width: 100%;
+    color: #ced6f5;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+div.news_item {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 30% 50% 20%;
+    margin: 0;
+    margin-bottom: 5px;
+    background-color: rgba(62, 83, 95, .7);
+    width: 100%;
+    height: 16%;
+    border-style: groove;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+p.news_header {
+    color: #f0dccc;
+    margin-left: 15px;
+}
+
+p.author {
+    margin-right: 5px;
+    font-weight: 300;
+    font-style: italic;
+    color: #cbb584;
+    margin-left: 15px;
+    grid-row-start: 3;
+}
+
+p.date {
+    margin-right: 5px;
+    font-weight: 300;
+    font-style: italic;
+    color: #cbb584;
+    grid-row-start: 3;
+    grid-column-start: 2;
+    text-align: right;
+    margin-right: 15px;
+}
+
+div.review {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 70% 30%;
+    margin: 0;
+    margin-bottom: 5px;
+    background-color: rgba(62, 83, 95, .7);
+    width: 100%;
+    height: auto;
+    min-height: 80px;
+    border-style: groove;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 2px
+}
+
+p.review_text {
+    color: #ced6f5;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+p.review_date {
+    color: #ced6f5;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    text-align: right;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+p.review_author {
+    color: #ced6f5;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    font-size: 1em;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+div.form_review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100px;
+    padding: 10px;
+    text-align: center;
+}
+
+div.poll_container {
+    grid-column-start: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.space_between {
+    height: 10px;
+}
+
+div.footer {
+    display: flex;
+    height: 140px;
+    background: #2e343f;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p.footer_text {
+    font-size: 0.9em;
+    font-weight: 300;
+    font-style: italic;
+    color: #cbb584;
+    padding: 1.5px;
+}
+
+img.up {
+    width: 2.5em;
+    height: auto;
+    cursor: pointer;
+    margin-bottom: 7px;
+}
+
+
+
+
+@media (min-width: 1100px) {
+    p.main_head {
+        font-size: 3.3em;
+    }
+
+    img.logo {
+        width: 3.3em;
+    }
+
+    div.lang_panel {
+        margin-left: 45.6%;
+    }
+
+    button.menu_item {
+        font-size: 1em;
+    }
+
+    p.news_header {
+        font-size: 2em;
+    }
+    p.author, p.date, p.review_author, p.review_date, p.review_text {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 1099px) {
+    p.main_head {
+        font-size: 2.3em;
+    }
+
+    img.logo {
+        width: 3em;
+    }
+
+    div.lang_panel {
+        margin-left: 40%;
+    }
+
+    button.menu_item {
+        font-size: 0.8em;
+    }
+
+    p.news_header {
+        font-size: 1.7em;
+    }
+    p.author, p.date, p.review_author, p.review_date, p.review_text {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 700px) {
+    p.main_head {
+        font-size: 2em;
+    }
+
+    img.logo {
+        width: 2.7em;
+    }
+
+    div.lang_panel {
+        margin-left: 27%;
+    }
+
+    button.menu_item {
+        font-size: 0.65em;
+    }
+
+    p.news_header {
+        font-size: 1.4em;
+    }
+    p.author, p.date, p.review_author, p.review_date, p.review_text {
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 500px) {
+    p.main_head {
+        font-size: 1.6em;
+    }
+
+    img.logo {
+        width: 2.4em;
+    }
+
+    div.lang_panel {
+        margin-left: 15%;
+    }
+
+    button.menu_item {
+        font-size: 0.45em;
+    }
+
+    p.news_header {
+        font-size: 1.1em;
+    }
+    p.author, p.date, p.review_author, p.review_date, p.review_text {
+        font-size: 0.6em;
+    }
+
+    div.container-content {
+        grid-template-columns: 1% 74% 1% 24%;
+    }
+
+    div.menu {
+        padding-right: 2px;
+        padding-left: 2px;
+    }
 }
