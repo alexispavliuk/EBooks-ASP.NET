@@ -18,6 +18,11 @@ namespace DAL.Entities
         public string Author { get; set; }
 
         /// <summary>
+        /// header of the news
+        /// </summary>
+        public string Header { get; set; }
+
+        /// <summary>
         /// text of news
         /// </summary>
         public string Text { get; set; }
