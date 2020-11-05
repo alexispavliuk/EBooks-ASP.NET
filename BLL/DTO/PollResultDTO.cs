@@ -20,7 +20,7 @@ namespace BLL.DTO
         /// Unique email
         /// </summary>
         [Required(ErrorMessage = "Введіть будь ласка електронну пошту")]
-        [RegularExpression(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", ErrorMessage = "Формат електронної пошти некоректний")]
+        [EmailAddress]
         public string Email { get; set; }
 
         /// <summary>
