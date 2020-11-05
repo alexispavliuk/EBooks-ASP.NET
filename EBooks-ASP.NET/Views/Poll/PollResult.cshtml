@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "PollResult";
+}
+
+@using BLL.DTO
+@model PollResultDTO
+<div class="poll_container">
+    <p>Ваше ім'я: @Model.Name</p>
+    <p>Ваша електронна пошта: @Model.Email</p>
+    <p>Перебуваєте у шлюбі: @PrintBool(Model.IsMarried)</p>
+    <p>Ваш рік народження: @Model.BornIn</p>
+</div>
+
+@helper PrintBool(bool value) 
+{
+    if (value) 
+    {
+        <span>так</span>
+}
+    else
+    {
+        <span>ні</span>
+    }
+}

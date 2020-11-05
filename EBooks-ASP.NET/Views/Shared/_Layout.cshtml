@@ -1,43 +1,55 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - приложение ASP.NET</title>
+    <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Имя приложения", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Информация", "About", "Home")</li>
-                    <li>@Html.ActionLink("Связаться", "Contact", "Home")</li>
-                </ul>
+    <div class="panel">
+        <a href="@Url.Action("Index", "Home")">
+            <img class="logo" src="~/Content/reading.png" />
+        </a>
+        <a href="@Url.Action("Index", "Home")" style="text-decoration:none">
+            <p class="main_head">EBooks</p>
+        </a>
+        <div id="lang_panel" class="lang_panel">
+            <p class="lang">ua</p>
+            <p class="lang_border">|</p>
+            <p class="lang">ru</p>
+            <p class="lang_border">|</p>
+            <p class="lang">en</p>
+        </div>
+    </div>
+    <div class="background-content">
+        <div class="container-content">
+            @RenderBody()
+            <div class="menu">
+                <a href="@Url.Action("Index", "Home")">
+                    <button class="menu_item">Головна</button>
+                </a>
+                <a href="@Url.Action("Index", "Guest")">
+                    <button class="menu_item">Відгуки</button>
+                </a>
+                <a href="@Url.Action("Index", "Poll")">
+                    <button class="menu_item">Анкета</button>
+                </a>
             </div>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - мое приложение ASP.NET</p>
-        </footer>
+    <div class="footer">
+        <div>
+            <img class="up" id="up_button" src="~/Content/up.png" />
+        </div>
+        <p class="footer_text">&copy; @DateTime.Now.Year - EBooks</p>
+        <p class="footer_text">Author: Oleksii Pavliuk</p>
+        <p class="footer_text">alexispavliuk@gmail.com</p>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/script")
+
     @RenderSection("scripts", required: false)
 </body>
 </html>

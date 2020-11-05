@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Reviews";
+}
+
+@using BLL.DTO
+@model ReviewDTO
+<div class="reviews_contatiner">
+    @using (Html.BeginForm("AddReview", "Guest", FormMethod.Post))
+    {
+    <div class="form_review">
+        <p>Ваше ім'я:</p>
+        @Html.EditorFor(model => model.Author)
+        @Html.ValidationMessageFor(model => model.Author)
+        <div class="space_between"></div>
+        <p>Текст відгуку:</p>
+        @Html.TextAreaFor(model => model.Text, 5, 50, null)
+        @Html.ValidationMessageFor(model => model.Text)
+        <p><input type="submit" value="Додати відгук" /></p>
+    </div>
+    }
+</div>
+

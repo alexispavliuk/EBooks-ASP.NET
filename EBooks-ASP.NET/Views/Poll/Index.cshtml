@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Poll";
+}
+
+@using BLL.DTO
+@model PollResultDTO
+
+<div class="poll_container">
+    @using (Html.BeginForm("PollResult", "Poll", FormMethod.Post))
+    {
+        <p>Ваше ім'я:</p>
+        @Html.EditorFor(model => model.Name)
+        @Html.ValidationMessageFor(model => model.Name)
+        <div class="space_between"></div>
+        <p>Ваша електронна адреса:</p>
+        @Html.EditorFor(model => model.Email)
+        @Html.ValidationMessageFor(model => model.Email)
+        <div class="space_between"></div>
+        <p>
+            Чи перебуваєте зараз у шлюбі?:
+        </p>
+        @Html.RadioButtonFor(model => model.IsMarried, true)
+        <span>так</span> <br />
+        @Html.RadioButtonFor(model => model.IsMarried, false)
+        <span>ні</span> <br />
+        @Html.ValidationMessageFor(model => model.IsMarried)
+        <div class="space_between"></div>
+        <p for="age">Оберіть рік народження:</p>
+        <select name="BornIn">
+            @AgeSelector()
+        </select>
+        @Html.ValidationMessageFor(model => model.BornIn)
+        <div class="space_between"></div>
+        <p>
+            <input type="submit" value="Отправить" />
+        </p>
+    }
+</div>
+
+
+@helper AgeSelector()
+{
+    for (int year = DateTime.Now.Year; year > 1940; year--)
+    {
+        <option value=@year>@year</option>
+    }
+}
+

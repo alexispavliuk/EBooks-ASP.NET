@@ -1,0 +1,24 @@
+﻿@using BLL.DTO
+@helper ReviewsList(IEnumerable<ReviewDTO> reviews)
+{
+    foreach (var review in reviews)
+    {
+        <div class="review">
+            <p class="review_text">@review.Text</p>
+            <p class="review_date">@review.Date.ToString("dd.MM.yyyy")</p>
+            <p class="review_author">@review.Author</p>
+        </div>
+    }
+}
+
+@model IEnumerable<ReviewDTO>
+@{
+    ViewBag.Title = "Reviews";
+}
+
+<div class="reviews_contatiner">
+    @ReviewsList(Model)
+    <a href="@Url.Action("AddReview", "Guest")">
+        <button class="menu_item" style="width:100px;">Додати відгук</button>
+    </a>
+</div>

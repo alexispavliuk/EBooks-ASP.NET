@@ -1,0 +1,13 @@
+﻿@model BLL.DTO.NewsDTO
+
+@{
+    ViewBag.Title = "ReadNews";
+}
+
+<div class="news_full">
+    <p class="news_full_header">@Model.Header</p>
+    <p class="news_full_text">@Model.Text</p>
+    <p class="author_date_news_full">@Model.Author</p>
+    <p class="author_date_news_full">@Model.Date.ToString("dd.MM.yyyy")</p>
+</div>
+
