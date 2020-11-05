@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBooks-ASP.NET", "EBooks-ASP.NET\EBooks-ASP.NET.csproj", "{180A9502-E916-4EEA-9F05-BC9B930765F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{A42034E8-589D-4876-9A38-D9794A2B6CC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{C004221B-850C-41A9-942E-5FF136D3FCDD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{180A9502-E916-4EEA-9F05-BC9B930765F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{180A9502-E916-4EEA-9F05-BC9B930765F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{180A9502-E916-4EEA-9F05-BC9B930765F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A42034E8-589D-4876-9A38-D9794A2B6CC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A42034E8-589D-4876-9A38-D9794A2B6CC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A42034E8-589D-4876-9A38-D9794A2B6CC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A42034E8-589D-4876-9A38-D9794A2B6CC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C004221B-850C-41A9-942E-5FF136D3FCDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C004221B-850C-41A9-942E-5FF136D3FCDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C004221B-850C-41A9-942E-5FF136D3FCDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C004221B-850C-41A9-942E-5FF136D3FCDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
