@@ -1,9 +1,5 @@
 ﻿using BLL.DTO;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BLL.Interfaces
 {
@@ -11,6 +7,7 @@ namespace BLL.Interfaces
     {
         void AddNews(NewsDTO news);
         IEnumerable<NewsDTO> GetNews();
+        NewsDTO GetNewsById(int id);
         void Dispose();
     }
 }

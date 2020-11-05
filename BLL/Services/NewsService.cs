@@ -3,9 +3,8 @@ using BLL.DTO;
 using BLL.Interfaces;
 using DAL.Entities;
 using DAL.Interfaces;
+using System;
 using System.Collections.Generic;
-
-
 
 namespace BLL.Services
 {
@@ -34,16 +33,12 @@ namespace BLL.Services
             News newsToAdd = new News
             {
                 Author = news.Author,
+                Header = news.Header,
                 Text = news.Text,
                 Date = news.Date
             };
             Database.News.Create(newsToAdd);
             Database.Save();
-        }
-
-        public void Dispose()
-        {
-            Database.Dispose();
         }
 
         /// <summary>
@@ -54,6 +49,32 @@ namespace BLL.Services
         {
             var mapper = new MapperConfiguration(cfg => cfg.CreateMap<News, NewsDTO>()).CreateMapper();
             return mapper.Map<IEnumerable<News>, List<NewsDTO>>(Database.News.GetAll());
+        }
+
+        /// <summary>
+        /// get news by id
+        /// </summary>
+        /// <param name="id">id of news</param>
+        /// <returns>newsdto</returns>
+        public NewsDTO GetNewsById(int id)
+        {
+            var news = Database.News.Get(id);
+            if (news == null)
+            {
+                throw new ArgumentException("There is no news with such id", "id");
+            }
+            return new NewsDTO
+            {
+                Author = news.Author,
+                Text = news.Text,
+                Header = news.Header,
+                Date = news.Date
+            };
+        }
+
+        public void Dispose()
+        {
+            Database.Dispose();
         }
     }
 }
